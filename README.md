@@ -1,2 +1,2 @@
-# jitang1987.github.io
+# tangji-nz.github.io
 Personal website
