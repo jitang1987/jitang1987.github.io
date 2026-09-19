@@ -9,15 +9,19 @@
         content="Academic homepage of Tang Ji. Research interests include Cognitive Digital Twin, Smart Manufacturing, Digital Twin and Industry 4.0.">
 
   <meta property="og:title" content="Tang Ji | Academic Profile">
+
   <meta property="og:description"
         content="Research in Cognitive Digital Twin, Smart Manufacturing, Digital Twin and Industry 4.0.">
+
   <meta property="og:type" content="website">
+
   <meta property="og:image"
         content="https://jitang1987.github.io/profile.png">
 
   <link rel="icon" href="profile.png">
 
   <title>Tang Ji | Academic Profile</title>
+
 
   <style>
 
@@ -392,32 +396,48 @@
        PUBLICATIONS
        ========================= */
 
-    .publication-year {
-      font-size: 19px;
+    .publication {
+      padding: 22px 0;
+      border-bottom: 1px solid #e8edf0;
+    }
+
+    .publication:first-of-type {
+      padding-top: 0;
+    }
+
+    .publication:last-of-type {
+      border-bottom: none;
+      padding-bottom: 4px;
+    }
+
+    .publication-top {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .publication-year-label {
+      font-size: 13px;
       font-weight: 700;
       color: #005f91;
-      margin-top: 28px;
-      margin-bottom: 12px;
     }
 
-    .publication-year:first-of-type {
-      margin-top: 0;
-    }
-
-    .publication {
-      padding: 17px 0;
-      border-bottom: 1px solid #edf0f2;
-    }
-
-    .publication:last-child {
-      border-bottom: none;
+    .publication-type {
+      font-size: 11px;
+      color: #527184;
+      background: #f0f5f7;
+      padding: 3px 8px;
+      border-radius: 12px;
     }
 
     .publication-title {
       font-weight: 700;
       color: #222;
-      line-height: 1.45;
-      margin-bottom: 5px;
+      line-height: 1.5;
+      margin-bottom: 7px;
+      font-size: 15px;
     }
 
     .publication-authors {
@@ -429,14 +449,14 @@
     .publication-venue {
       color: #666;
       font-size: 14px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
-    .doi-link {
+    .publication-link {
       display: inline-block;
       color: #006ca5;
       background: #eef6fb;
-      padding: 4px 10px;
+      padding: 5px 11px;
       border-radius: 14px;
       text-decoration: none;
       font-size: 12px;
@@ -444,18 +464,18 @@
       transition: 0.2s ease;
     }
 
-    .doi-link:hover {
+    .publication-link:hover {
       background: #dceef8;
     }
 
     .scholar-button {
       display: inline-block;
-      margin-top: 24px;
+      margin-top: 26px;
       background: #005f91;
       color: white;
       text-decoration: none;
       border-radius: 7px;
-      padding: 9px 15px;
+      padding: 10px 16px;
       font-size: 13px;
       transition: 0.2s ease;
     }
@@ -551,12 +571,14 @@
     </div>
 
     <div class="nav-links">
+
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
       <a href="#awards">Awards</a>
       <a href="#publications">Publications</a>
+
     </div>
 
   </div>
@@ -567,7 +589,9 @@
 <div class="container">
 
 
-  <!-- PROFILE CARD -->
+  <!-- =========================
+       PROFILE
+       ========================= -->
 
   <aside class="profile-card">
 
@@ -586,47 +610,68 @@
     </div>
 
     <div class="role">
+
       Department of Mechanical and Mechatronics Engineering
       <br>
+
       University of Auckland
       <br>
+
       Auckland, New Zealand
+
     </div>
+
 
     <div class="profile-links">
 
+
       <a href="mailto:tji379@aucklanduni.ac.nz">
+
         <span class="link-icon">@</span>
         <span>Email</span>
+
       </a>
+
 
       <a href="https://orcid.org/0000-0003-3433-3703"
          target="_blank"
          rel="noopener noreferrer">
+
         <span class="link-icon">iD</span>
         <span>ORCID</span>
+
       </a>
+
 
       <a href="https://scholar.google.com/citations?user=5ovP_P4AAAAJ&hl=en"
          target="_blank"
          rel="noopener noreferrer">
+
         <span class="link-icon">GS</span>
         <span>Google Scholar</span>
+
       </a>
+
 
       <a href="https://www.linkedin.com/in/tang--ji/"
          target="_blank"
          rel="noopener noreferrer">
+
         <span class="link-icon">in</span>
         <span>LinkedIn</span>
+
       </a>
+
 
     </div>
 
   </aside>
 
 
-  <!-- MAIN CONTENT -->
+
+  <!-- =========================
+       MAIN CONTENT
+       ========================= -->
 
   <main>
 
@@ -654,11 +699,13 @@
     </section>
 
 
+
     <!-- RESEARCH -->
 
     <section class="content-card" id="research">
 
       <h2>Research</h2>
+
 
       <div class="interest-tags">
 
@@ -672,6 +719,7 @@
 
 
       <div class="research-grid">
+
 
         <div class="research-box">
 
@@ -724,9 +772,11 @@
 
         </div>
 
+
       </div>
 
     </section>
+
 
 
     <!-- EDUCATION -->
@@ -799,6 +849,7 @@
     </section>
 
 
+
     <!-- EXPERIENCE -->
 
     <section class="content-card" id="experience">
@@ -807,29 +858,6 @@
 
 
       <div class="timeline">
-
-
-        <div class="timeline-item">
-
-          <div class="year">
-            Current
-          </div>
-
-          <div class="timeline-title">
-            Technical Business Development Manager
-          </div>
-
-          <div class="timeline-meta">
-            Maian Fasteners · Auckland, New Zealand
-          </div>
-
-          <div class="timeline-description">
-            Technical business development, customer engagement and
-            market development for industrial fastening products in
-            New Zealand.
-          </div>
-
-        </div>
 
 
         <div class="timeline-item">
@@ -893,8 +921,7 @@
 
           <div class="timeline-description">
             Teaching, laboratory support and assessment activities in
-            Mechanical and Mechatronics Engineering, including manufacturing
-            and engineering courses.
+            Mechanical and Mechatronics Engineering.
           </div>
 
         </div>
@@ -952,11 +979,13 @@
     </section>
 
 
-    <!-- AWARDS -->
+
+    <!-- AWARDS & MEMBERSHIPS -->
 
     <section class="content-card" id="awards">
 
       <h2>Awards & Memberships</h2>
+
 
       <div class="info-grid">
 
@@ -1018,50 +1047,79 @@
     </section>
 
 
-    <!-- PUBLICATIONS -->
+
+    <!-- =========================
+         SELECTED PUBLICATIONS
+         ========================= -->
 
     <section class="content-card" id="publications">
 
       <h2>Selected Publications</h2>
 
 
-      <div class="publication-year">
-        2026
-      </div>
-
+      <!-- 2026 -->
 
       <div class="publication">
+
+        <div class="publication-top">
+
+          <span class="publication-year-label">
+            2026
+          </span>
+
+          <span class="publication-type">
+            Book Chapter
+          </span>
+
+        </div>
+
 
         <div class="publication-title">
           Digital twins for cyber-physical systems
         </div>
+
 
         <div class="publication-authors">
           <strong>Tang Ji</strong>, Yangyang Liu, Jinlong Chu,
           Jan Polzer, and Xun Xu
         </div>
 
+
         <div class="publication-venue">
           <em>Foundations of Digital Twins</em>,
           pp. 477–494, Elsevier.
         </div>
 
-        <a class="doi-link"
+
+        <a class="publication-link"
            href="https://doi.org/10.1016/B978-0-443-43896-7.00001-7"
            target="_blank"
            rel="noopener noreferrer">
-          DOI
+
+          View publication ↗
+
         </a>
 
       </div>
 
 
-      <div class="publication-year">
-        2025
-      </div>
 
+      <!-- 2025 -->
 
       <div class="publication">
+
+        <div class="publication-top">
+
+          <span class="publication-year-label">
+            2025
+          </span>
+
+          <span class="publication-type">
+            Journal Article
+          </span>
+
+        </div>
+
 
         <div class="publication-title">
           Exploring the Integration of Cloud Manufacturing and
@@ -1069,92 +1127,58 @@
           An OPC UA Approach
         </div>
 
+
         <div class="publication-authors">
           <strong>Tang Ji</strong> and Xun Xu
         </div>
+
 
         <div class="publication-venue">
           <em>Robotics and Computer-Integrated Manufacturing</em>,
           93, 102927.
         </div>
 
-        <a class="doi-link"
+
+        <a class="publication-link"
            href="https://doi.org/10.1016/j.rcim.2024.102927"
            target="_blank"
            rel="noopener noreferrer">
-          DOI
+
+          View publication ↗
+
         </a>
 
       </div>
 
 
-      <div class="publication">
 
-        <div class="publication-title">
-          A survey of cognitive digital twin and the potential use of LLMs
-        </div>
-
-        <div class="publication-authors">
-          Yangyang Liu, <strong>Tang Ji</strong>, Xiangyu Guo,
-          Xun Xu, and Jan Polzer
-        </div>
-
-        <div class="publication-venue">
-          <em>Manufacturing Letters</em>,
-          44, 1242–1253.
-        </div>
-
-        <a class="doi-link"
-           href="https://doi.org/10.1016/j.mfglet.2025.06.144"
-           target="_blank"
-           rel="noopener noreferrer">
-          DOI
-        </a>
-
-      </div>
-
+      <!-- 2024 -->
 
       <div class="publication">
 
-        <div class="publication-title">
-          Development of a Cloud-Based Smart Factory Using OPCUA
+        <div class="publication-top">
+
+          <span class="publication-year-label">
+            2024
+          </span>
+
+          <span class="publication-type">
+            Conference Paper
+          </span>
+
         </div>
 
-        <div class="publication-authors">
-          Roshan Benzy George, <strong>Tang Ji</strong>, and Xun Xu
-        </div>
-
-        <div class="publication-venue">
-          <em>2025 IEEE 21st International Conference on
-          Automation Science and Engineering (CASE)</em>,
-          pp. 3367–3372.
-        </div>
-
-        <a class="doi-link"
-           href="https://doi.org/10.1109/CASE58245.2025.11163934"
-           target="_blank"
-           rel="noopener noreferrer">
-          DOI
-        </a>
-
-      </div>
-
-
-      <div class="publication-year">
-        2024
-      </div>
-
-
-      <div class="publication">
 
         <div class="publication-title">
           Developing Cognitive Digital Twin for Smart Manufacturing:
           Methodology and Case Study
         </div>
 
+
         <div class="publication-authors">
           <strong>Tang Ji</strong>, Jan Polzer, and Xun Xu
         </div>
+
 
         <div class="publication-venue">
           <em>2024 IEEE 20th International Conference on
@@ -1162,71 +1186,114 @@
           pp. 1656–1661.
         </div>
 
-        <a class="doi-link"
+
+        <a class="publication-link"
            href="https://doi.org/10.1109/CASE59546.2024.10711555"
            target="_blank"
            rel="noopener noreferrer">
-          DOI
+
+          View publication ↗
+
         </a>
 
       </div>
 
 
-      <div class="publication">
 
-        <div class="publication-title">
-          An adaptable Digital Twin model for manufacturing
-        </div>
-
-        <div class="publication-authors">
-          Huiyue Huang, <strong>Tang Ji</strong>, and Xun Xu
-        </div>
-
-        <div class="publication-venue">
-          <em>Manufacturing Letters</em>,
-          41, 1163–1169.
-        </div>
-
-        <a class="doi-link"
-           href="https://doi.org/10.1016/j.mfglet.2024.09.142"
-           target="_blank"
-           rel="noopener noreferrer">
-          DOI
-        </a>
-
-      </div>
-
-
-      <div class="publication-year">
-        2023
-      </div>
-
+      <!-- 2023 -->
 
       <div class="publication">
+
+        <div class="publication-top">
+
+          <span class="publication-year-label">
+            2023
+          </span>
+
+          <span class="publication-type">
+            Conference Paper
+          </span>
+
+        </div>
+
 
         <div class="publication-title">
           Cognitive Digital Twin Framework for Smart Manufacturing
         </div>
 
+
         <div class="publication-authors">
           <strong>Tang Ji</strong>, Jan Polzer, and Xun Xu
         </div>
 
+
         <div class="publication-venue">
           <em>2023 IEEE 19th International Conference on
-          Automation Science and Engineering (CASE)</em>,
-          pp. 1–6.
+          Automation Science and Engineering (CASE)</em>.
         </div>
 
-        <a class="doi-link"
+
+        <a class="publication-link"
            href="https://doi.org/10.1109/CASE56687.2023.10260436"
            target="_blank"
            rel="noopener noreferrer">
-          DOI
+
+          View publication ↗
+
         </a>
 
       </div>
 
+
+
+      <!-- 2022 -->
+
+      <div class="publication">
+
+        <div class="publication-top">
+
+          <span class="publication-year-label">
+            2022
+          </span>
+
+          <span class="publication-type">
+            Journal Article
+          </span>
+
+        </div>
+
+
+        <div class="publication-title">
+          Digital Twin Technology — A bibliometric study of top
+          research articles based on Local Citation Score
+        </div>
+
+
+        <div class="publication-authors">
+          <strong>Tang Ji</strong>, Huiyue Huang, and Xun Xu
+        </div>
+
+
+        <div class="publication-venue">
+          <em>Journal of Manufacturing Systems</em>,
+          64, 390–408.
+        </div>
+
+
+        <a class="publication-link"
+           href="https://doi.org/10.1016/j.jmsy.2022.06.016"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          View publication ↗
+
+        </a>
+
+      </div>
+
+
+
+      <!-- GOOGLE SCHOLAR -->
 
       <a class="scholar-button"
          href="https://scholar.google.com/citations?user=5ovP_P4AAAAJ&hl=en"
