@@ -100,7 +100,6 @@
       border-radius: 14px;
       padding: 32px 24px;
       text-align: center;
-
       position: sticky;
       top: 100px;
     }
@@ -112,7 +111,7 @@
       margin: 0 auto 22px;
       overflow: hidden;
       background: #d9e7ef;
-      border: 3px solid rgba(255, 255, 255, 0.22);
+      border: 3px solid rgba(255, 255, 255, 0.7);
     }
 
     .avatar img {
@@ -149,6 +148,11 @@
       font-size: 14px;
       line-height: 1.55;
     }
+
+
+    /* =========================
+       PROFILE LINKS
+       ========================= */
 
     .profile-links {
       margin-top: 28px;
@@ -225,7 +229,7 @@
 
 
     /* =========================
-       RESEARCH INTEREST TAGS
+       RESEARCH INTERESTS
        ========================= */
 
     .interest-tags {
@@ -348,9 +352,76 @@
        PUBLICATIONS
        ========================= */
 
-    .publication-note {
+    .publication-year {
+      font-size: 19px;
+      font-weight: 700;
+      color: #005f91;
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+
+    .publication-year:first-of-type {
+      margin-top: 0;
+    }
+
+    .publication {
+      padding: 16px 0;
+      border-bottom: 1px solid #edf0f2;
+    }
+
+    .publication:last-child {
+      border-bottom: none;
+    }
+
+    .publication-title {
+      font-weight: 700;
+      color: #222;
+      line-height: 1.45;
+      margin-bottom: 5px;
+    }
+
+    .publication-authors {
       color: #555;
-      margin-bottom: 0;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .publication-venue {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .doi-link {
+      display: inline-block;
+      color: #006ca5;
+      background: #eef6fb;
+      padding: 4px 10px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .doi-link:hover {
+      background: #dceef8;
+    }
+
+    .scholar-button {
+      display: inline-block;
+      margin-top: 24px;
+      background: #005f91;
+      color: white;
+      text-decoration: none;
+      border-radius: 7px;
+      padding: 9px 15px;
+      font-size: 13px;
+      transition: 0.2s ease;
+    }
+
+    .scholar-button:hover {
+      background: #004976;
     }
 
 
@@ -429,9 +500,12 @@
 <div class="container">
 
 
-  <!-- PROFILE CARD -->
+  <!-- =========================
+       PROFILE CARD
+       ========================= -->
 
   <aside class="profile-card">
+
 
     <div class="avatar">
 
@@ -473,6 +547,23 @@
     <div class="profile-links">
 
 
+      <!-- EMAIL -->
+
+      <a href="mailto:tji379@aucklanduni.ac.nz">
+
+        <span class="link-icon">
+          @
+        </span>
+
+        <span>
+          Email
+        </span>
+
+      </a>
+
+
+      <!-- ORCID -->
+
       <a
         href="https://orcid.org/0000-0003-3433-3703"
         target="_blank"
@@ -488,6 +579,26 @@
 
       </a>
 
+
+      <!-- GOOGLE SCHOLAR -->
+
+      <a
+        href="https://scholar.google.com/citations?user=5ovP_P4AAAAJ&hl=en"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <span class="link-icon">
+          GS
+        </span>
+
+        <span>
+          Google Scholar
+        </span>
+
+      </a>
+
+
+      <!-- LINKEDIN -->
 
       <a
         href="https://www.linkedin.com/in/tang--ji/"
@@ -507,11 +618,14 @@
 
     </div>
 
+
   </aside>
 
 
 
-  <!-- MAIN CONTENT -->
+  <!-- =========================
+       MAIN CONTENT
+       ========================= -->
 
   <main>
 
@@ -682,7 +796,7 @@
         <div class="timeline-item">
 
           <div class="year">
-            Completed 2026
+            2021 – 2026
           </div>
 
           <div class="timeline-title">
@@ -704,6 +818,10 @@
 
 
         <div class="timeline-item">
+
+          <div class="year">
+            2020 – 2021
+          </div>
 
           <div class="timeline-title">
             MEng, Mechanical Engineering
@@ -774,6 +892,30 @@
         </div>
 
 
+        <div class="timeline-item">
+
+          <div class="year">
+            2022 – 2025
+          </div>
+
+          <div class="timeline-title">
+            Teaching Assistant / Professional Teaching Fellow
+          </div>
+
+          <div class="timeline-meta">
+            University of Auckland
+          </div>
+
+          <div class="timeline-description">
+
+            Teaching and laboratory support in Mechanical and
+            Mechatronics Engineering.
+
+          </div>
+
+        </div>
+
+
       </div>
 
 
@@ -781,22 +923,252 @@
 
 
 
-    <!-- PUBLICATIONS -->
+    <!-- =========================
+         PUBLICATIONS
+         ========================= -->
 
     <section
       class="content-card"
       id="publications">
 
       <h2>
-        Publications
+        Selected Publications
       </h2>
 
-      <p class="publication-note">
 
-        Selected journal articles, conference papers and other research
-        outputs will be added here.
+      <!-- 2026 -->
 
-      </p>
+      <div class="publication-year">
+        2026
+      </div>
+
+
+      <div class="publication">
+
+        <div class="publication-title">
+          Digital twins for cyber-physical systems
+        </div>
+
+        <div class="publication-authors">
+          <strong>Tang Ji</strong>, Yangyang Liu, Jinlong Chu,
+          Jan Polzer, and Xun Xu
+        </div>
+
+        <div class="publication-venue">
+          <em>Foundations of Digital Twins</em>,
+          pp. 477–494, Elsevier.
+        </div>
+
+        <a
+          class="doi-link"
+          href="https://doi.org/10.1016/B978-0-443-43896-7.00001-7"
+          target="_blank"
+          rel="noopener noreferrer">
+          DOI
+        </a>
+
+      </div>
+
+
+
+      <!-- 2025 -->
+
+      <div class="publication-year">
+        2025
+      </div>
+
+
+      <div class="publication">
+
+        <div class="publication-title">
+          Exploring the Integration of Cloud Manufacturing and
+          Cyber-Physical Systems in the Era of Industry 4.0 –
+          An OPC UA Approach
+        </div>
+
+        <div class="publication-authors">
+          <strong>Tang Ji</strong> and Xun Xu
+        </div>
+
+        <div class="publication-venue">
+          <em>Robotics and Computer-Integrated Manufacturing</em>,
+          93, 102927.
+        </div>
+
+        <a
+          class="doi-link"
+          href="https://doi.org/10.1016/j.rcim.2024.102927"
+          target="_blank"
+          rel="noopener noreferrer">
+          DOI
+        </a>
+
+      </div>
+
+
+      <div class="publication">
+
+        <div class="publication-title">
+          A survey of cognitive digital twin and the potential use of LLMs
+        </div>
+
+        <div class="publication-authors">
+          Yangyang Liu, <strong>Tang Ji</strong>, Xiangyu Guo,
+          Xun Xu, and Jan Polzer
+        </div>
+
+        <div class="publication-venue">
+          <em>Manufacturing Letters</em>,
+          44, 1242–1253.
+        </div>
+
+        <a
+          class="doi-link"
+          href="https://doi.org/10.1016/j.mfglet.2025.06.144"
+          target="_blank"
+          rel="noopener noreferrer">
+          DOI
+        </a>
+
+      </div>
+
+
+      <div class="publication">
+
+        <div class="publication-title">
+          Development of a Cloud-Based Smart Factory Using OPCUA
+        </div>
+
+        <div class="publication-authors">
+          Roshan Benzy George, <strong>Tang Ji</strong>, and Xun Xu
+        </div>
+
+        <div class="publication-venue">
+          <em>2025 IEEE 21st International Conference on
+          Automation Science and Engineering (CASE)</em>,
+          pp. 3367–3372.
+        </div>
+
+        <a
+          class="doi-link"
+          href="https://doi.org/10.1109/CASE58245.2025.11163934"
+          target="_blank"
+          rel="noopener noreferrer">
+          DOI
+        </a>
+
+      </div>
+
+
+
+      <!-- 2024 -->
+
+      <div class="publication-year">
+        2024
+      </div>
+
+
+      <div class="publication">
+
+        <div class="publication-title">
+          Developing Cognitive Digital Twin for Smart Manufacturing:
+          Methodology and Case Study
+        </div>
+
+        <div class="publication-authors">
+          <strong>Tang Ji</strong>, Jan Polzer, and Xun Xu
+        </div>
+
+        <div class="publication-venue">
+          <em>2024 IEEE 20th International Conference on
+          Automation Science and Engineering (CASE)</em>,
+          pp. 1656–1661.
+        </div>
+
+        <a
+          class="doi-link"
+          href="https://doi.org/10.1109/CASE59546.2024.10711555"
+          target="_blank"
+          rel="noopener noreferrer">
+          DOI
+        </a>
+
+      </div>
+
+
+      <div class="publication">
+
+        <div class="publication-title">
+          An adaptable Digital Twin model for manufacturing
+        </div>
+
+        <div class="publication-authors">
+          Huiyue Huang, <strong>Tang Ji</strong>, and Xun Xu
+        </div>
+
+        <div class="publication-venue">
+          <em>Manufacturing Letters</em>,
+          41, 1163–1169.
+        </div>
+
+        <a
+          class="doi-link"
+          href="https://doi.org/10.1016/j.mfglet.2024.09.142"
+          target="_blank"
+          rel="noopener noreferrer">
+          DOI
+        </a>
+
+      </div>
+
+
+
+      <!-- 2023 -->
+
+      <div class="publication-year">
+        2023
+      </div>
+
+
+      <div class="publication">
+
+        <div class="publication-title">
+          Cognitive Digital Twin Framework for Smart Manufacturing
+        </div>
+
+        <div class="publication-authors">
+          <strong>Tang Ji</strong>, Jan Polzer, and Xun Xu
+        </div>
+
+        <div class="publication-venue">
+          <em>2023 IEEE 19th International Conference on
+          Automation Science and Engineering (CASE)</em>,
+          pp. 1–6.
+        </div>
+
+        <a
+          class="doi-link"
+          href="https://doi.org/10.1109/CASE56687.2023.10260436"
+          target="_blank"
+          rel="noopener noreferrer">
+          DOI
+        </a>
+
+      </div>
+
+
+      <!-- GOOGLE SCHOLAR BUTTON -->
+
+      <a
+        class="scholar-button"
+        href="https://scholar.google.com/citations?user=5ovP_P4AAAAJ&hl=en"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        View all publications on Google Scholar
+
+      </a>
+
 
     </section>
 
