@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,13 @@
   <title>Tang Ji | Academic Profile</title>
 
   <style>
+
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -19,7 +25,11 @@
       line-height: 1.6;
     }
 
-    /* Top Navigation */
+
+    /* =========================
+       TOP NAVIGATION
+       ========================= */
+
     header {
       background: #ffffff;
       border-bottom: 1px solid #e2e6ea;
@@ -48,13 +58,18 @@
       text-decoration: none;
       margin-left: 28px;
       font-size: 15px;
+      transition: color 0.2s ease;
     }
 
     .nav-links a:hover {
       color: #0072c6;
     }
 
-    /* Main Layout */
+
+    /* =========================
+       MAIN LAYOUT
+       ========================= */
+
     .container {
       max-width: 1200px;
       margin: 40px auto;
@@ -62,11 +77,16 @@
       display: grid;
       grid-template-columns: 280px 1fr;
       gap: 32px;
+      align-items: start;
     }
 
-    /* Profile Card */
+
+    /* =========================
+       PROFILE CARD
+       ========================= */
+
     .profile-card {
-      background: #00578a;
+      background: #005f91;
       color: white;
       border-radius: 14px;
       padding: 32px 24px;
@@ -78,69 +98,92 @@
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      background: #d9e7ef;
       margin: 0 auto 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #00578a;
-      font-size: 42px;
-      font-weight: bold;
+      overflow: hidden;
+      background: #d9e7ef;
     }
 
     .avatar img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 50%;
+      display: block;
     }
 
     .profile-card h1 {
       margin: 0;
       font-size: 30px;
+      line-height: 1.2;
     }
 
-    .profile-card .degree {
-      margin-top: 4px;
+    .degree {
+      margin-top: 8px;
       font-size: 15px;
-      opacity: 0.9;
+      opacity: 0.92;
     }
 
-    .profile-card .role {
+    .role {
       margin-top: 24px;
       font-size: 15px;
       line-height: 1.5;
     }
 
+
+    /* =========================
+       PROFILE LINKS
+       ========================= */
+
     .profile-links {
       margin-top: 28px;
-      border-top: 1px solid rgba(255,255,255,0.25);
       padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.22);
+      text-align: left;
     }
 
     .profile-links a {
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 11px;
       color: white;
       text-decoration: none;
-      margin: 10px 0;
+      margin: 12px 0;
       font-size: 14px;
+      opacity: 0.95;
+      transition: opacity 0.2s ease;
     }
 
     .profile-links a:hover {
-      text-decoration: underline;
+      opacity: 1;
     }
 
-    /* Content */
+    .link-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+
+    /* =========================
+       CONTENT CARDS
+       ========================= */
+
     .content-card {
       background: white;
       border-radius: 14px;
       padding: 34px 40px;
       margin-bottom: 22px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
 
     .content-card h2 {
-      color: #00578a;
+      color: #005f91;
       margin-top: 0;
       margin-bottom: 18px;
       font-size: 22px;
@@ -149,8 +192,13 @@
     }
 
     .content-card h3 {
+      margin-top: 0;
       margin-bottom: 4px;
       font-size: 17px;
+    }
+
+    .content-card p {
+      margin-top: 0;
     }
 
     .subtext {
@@ -158,6 +206,11 @@
       margin-top: 0;
       font-size: 14px;
     }
+
+
+    /* =========================
+       RESEARCH INTEREST TAGS
+       ========================= */
 
     .interest-tags {
       display: flex;
@@ -167,11 +220,16 @@
 
     .tag {
       background: #eef6fb;
-      color: #00578a;
+      color: #005f91;
       padding: 7px 13px;
       border-radius: 20px;
       font-size: 14px;
     }
+
+
+    /* =========================
+       EDUCATION / EXPERIENCE
+       ========================= */
 
     .item {
       margin-bottom: 22px;
@@ -181,6 +239,11 @@
       margin-bottom: 0;
     }
 
+
+    /* =========================
+       FOOTER
+       ========================= */
+
     footer {
       text-align: center;
       color: #777;
@@ -188,7 +251,11 @@
       padding: 30px;
     }
 
-    /* Mobile */
+
+    /* =========================
+       MOBILE
+       ========================= */
+
     @media (max-width: 800px) {
 
       .container {
@@ -207,178 +274,331 @@
       .content-card {
         padding: 26px 24px;
       }
-    }
-  </style>
 
+    }
+
+  </style>
 </head>
+
 
 <body>
 
-<header>
-  <div class="nav">
-    <div class="nav-name">Tang Ji</div>
 
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#publications">Publications</a>
-    </div>
-  </div>
-</header>
+  <!-- =========================
+       NAVIGATION
+       ========================= -->
 
+  <header>
 
-<div class="container">
+    <div class="nav">
 
-  <!-- LEFT PROFILE -->
+      <div class="nav-name">
+        Tang Ji
+      </div>
 
-  <aside class="profile-card">
+      <div class="nav-links">
 
-    <div class="avatar">
-      <img src="profile.png" alt="Tang Ji">
-    </div>
-
-    <h1>Tang Ji</h1>
-
-    <div class="degree">
-      PhD, Mechanical Engineering
-    </div>
-
-    <div class="role">
-      Research Assistant<br>
-      Department of Mechanical and Mechatronics Engineering<br>
-      University of Auckland
-    </div>
-
-    <div class="profile-links">
-
-      <a href="https://orcid.org/0000-0003-3433-3703"
-         target="_blank">
-        ORCID
-      </a>
-
-      <a href="https://www.linkedin.com/in/tang--ji/"
-         target="_blank">
-        LinkedIn
-      </a>
-
-    </div>
-
-  </aside>
-
-
-  <!-- RIGHT CONTENT -->
-
-  <main>
-
-    <section class="content-card" id="about">
-
-      <h2>About</h2>
-
-      <p>
-        Tang Ji received his PhD in Mechanical Engineering from the
-        University of Auckland. His research focuses on Cognitive Digital
-        Twin (CDT) for Smart Manufacturing, with particular interests in
-        data interoperability, industrial communication and intelligent
-        manufacturing systems.
-      </p>
-
-      <p>
-        His work explores the integration of Digital Twin technologies,
-        industrial communication protocols and AI-enabled methods to
-        support Smart Manufacturing and Industry 4.0 applications.
-      </p>
-
-    </section>
-
-
-    <section class="content-card" id="research">
-
-      <h2>Research Interests</h2>
-
-      <div class="interest-tags">
-
-        <span class="tag">Cognitive Digital Twin</span>
-        <span class="tag">Smart Manufacturing</span>
-        <span class="tag">Digital Twin</span>
-        <span class="tag">Industry 4.0</span>
-        <span class="tag">Industrial Interoperability</span>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
 
       </div>
 
-    </section>
+    </div>
+
+  </header>
 
 
-    <section class="content-card" id="education">
+  <!-- =========================
+       MAIN PAGE
+       ========================= -->
 
-      <h2>Education</h2>
+  <div class="container">
 
-      <div class="item">
-        <h3>PhD, Mechanical Engineering</h3>
-        <p class="subtext">
-          University of Auckland · Auckland, New Zealand
-        </p>
+
+    <!-- LEFT PROFILE -->
+
+    <aside class="profile-card">
+
+
+      <div class="avatar">
+
+        <img
+          src="profile.png"
+          alt="Tang Ji">
+
       </div>
 
-      <div class="item">
-        <h3>MEng, Mechanical Engineering</h3>
-        <p class="subtext">
-          University of Auckland · Auckland, New Zealand
-        </p>
+
+      <h1>
+        Tang Ji
+      </h1>
+
+
+      <div class="degree">
+        PhD, Mechanical Engineering
       </div>
 
-      <div class="item">
-        <h3>BEng, Automotive Engineering</h3>
-        <p class="subtext">
-          Jilin University · Changchun, China
-        </p>
+
+      <div class="role">
+
+        Research Assistant
+        <br>
+
+        Department of Mechanical and Mechatronics Engineering
+        <br>
+
+        University of Auckland
+
       </div>
 
-    </section>
+
+      <div class="profile-links">
 
 
-    <section class="content-card" id="experience">
+        <a
+          href="https://orcid.org/0000-0003-3433-3703"
+          target="_blank"
+          rel="noopener noreferrer">
 
-      <h2>Academic Experience</h2>
+          <span class="link-icon">
+            iD
+          </span>
 
-      <div class="item">
+          <span>
+            ORCID
+          </span>
 
-        <h3>Research Assistant</h3>
+        </a>
 
-        <p class="subtext">
-          University of Auckland
-        </p>
+
+        <a
+          href="https://www.linkedin.com/in/tang--ji/"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <span class="link-icon">
+            in
+          </span>
+
+          <span>
+            LinkedIn
+          </span>
+
+        </a>
+
+
+      </div>
+
+
+    </aside>
+
+
+    <!-- RIGHT CONTENT -->
+
+    <main>
+
+
+      <!-- ABOUT -->
+
+      <section
+        class="content-card"
+        id="about">
+
+        <h2>
+          About
+        </h2>
+
 
         <p>
-          Research and development activities in Smart Manufacturing,
-          Learning Factories and Digital Twin technologies.
+
+          Tang Ji received his PhD in Mechanical Engineering from the
+          University of Auckland. His research focuses on Cognitive Digital
+          Twin (CDT) for Smart Manufacturing, with particular interests in
+          data interoperability, industrial communication and intelligent
+          manufacturing systems.
+
         </p>
 
-      </div>
 
-    </section>
+        <p>
 
+          His work explores the integration of Digital Twin technologies,
+          industrial communication protocols and AI-enabled methods to
+          support Smart Manufacturing and Industry 4.0 applications.
 
-    <section class="content-card" id="publications">
-
-      <h2>Publications</h2>
-
-      <p>
-        Selected publications and research outputs will be added here.
-      </p>
-
-    </section>
+        </p>
 
 
-  </main>
-
-</div>
+      </section>
 
 
-<footer>
-  © 2026 Tang Ji
-</footer>
+
+      <!-- RESEARCH -->
+
+      <section
+        class="content-card"
+        id="research">
+
+        <h2>
+          Research Interests
+        </h2>
+
+
+        <div class="interest-tags">
+
+          <span class="tag">
+            Cognitive Digital Twin
+          </span>
+
+          <span class="tag">
+            Smart Manufacturing
+          </span>
+
+          <span class="tag">
+            Digital Twin
+          </span>
+
+          <span class="tag">
+            Industry 4.0
+          </span>
+
+          <span class="tag">
+            Industrial Interoperability
+          </span>
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- EDUCATION -->
+
+      <section
+        class="content-card"
+        id="education">
+
+        <h2>
+          Education
+        </h2>
+
+
+        <div class="item">
+
+          <h3>
+            PhD, Mechanical Engineering
+          </h3>
+
+          <p class="subtext">
+            University of Auckland · Auckland, New Zealand
+          </p>
+
+        </div>
+
+
+        <div class="item">
+
+          <h3>
+            MEng, Mechanical Engineering
+          </h3>
+
+          <p class="subtext">
+            University of Auckland · Auckland, New Zealand
+          </p>
+
+        </div>
+
+
+        <div class="item">
+
+          <h3>
+            BEng, Automotive Engineering
+          </h3>
+
+          <p class="subtext">
+            Jilin University · Changchun, China
+          </p>
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- EXPERIENCE -->
+
+      <section
+        class="content-card"
+        id="experience">
+
+        <h2>
+          Academic Experience
+        </h2>
+
+
+        <div class="item">
+
+          <h3>
+            Research Assistant
+          </h3>
+
+          <p class="subtext">
+            University of Auckland
+          </p>
+
+          <p>
+
+            Research and development activities in Smart Manufacturing,
+            Learning Factories and Digital Twin technologies.
+
+          </p>
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- PUBLICATIONS -->
+
+      <section
+        class="content-card"
+        id="publications">
+
+        <h2>
+          Publications
+        </h2>
+
+
+        <p>
+          Selected publications and research outputs will be added here.
+        </p>
+
+
+      </section>
+
+
+    </main>
+
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2026 Tang Ji
+
+  </footer>
+
 
 </body>
+
 </html>
