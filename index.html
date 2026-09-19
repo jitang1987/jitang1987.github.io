@@ -41,6 +41,12 @@
       line-height: 1.65;
     }
 
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid rgba(0, 114, 198, 0.35);
+      outline-offset: 3px;
+    }
+
 
     /* =========================
        NAVIGATION
@@ -53,15 +59,17 @@
       top: 0;
       z-index: 100;
       backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
 
     .nav {
       max-width: 1200px;
       margin: auto;
-      padding: 17px 24px;
+      padding: 16px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 30px;
     }
 
     .nav-name {
@@ -81,15 +89,21 @@
       color: #444;
       text-decoration: none;
       margin-left: 22px;
-      padding-bottom: 3px;
+      padding: 5px 0 4px;
       font-size: 14px;
       border-bottom: 2px solid transparent;
-      transition: 0.2s ease;
+      transition: color 0.2s ease, border-color 0.2s ease;
     }
 
     .nav-links a:hover {
       color: #0072c6;
-      border-bottom-color: #0072c6;
+      border-bottom-color: #b8d7e8;
+    }
+
+    .nav-links a.active {
+      color: #005f91;
+      border-bottom-color: #005f91;
+      font-weight: 600;
     }
 
 
@@ -102,7 +116,7 @@
       margin: 40px auto;
       padding: 0 24px;
       display: grid;
-      grid-template-columns: 285px 1fr;
+      grid-template-columns: 285px minmax(0, 1fr);
       gap: 32px;
       align-items: start;
     }
@@ -119,7 +133,8 @@
       padding: 32px 24px;
       text-align: center;
       position: sticky;
-      top: 100px;
+      top: 96px;
+      box-shadow: 0 5px 18px rgba(0, 66, 104, 0.08);
     }
 
     .avatar {
@@ -188,7 +203,7 @@
       margin: 12px 0;
       font-size: 14px;
       opacity: 0.94;
-      transition: 0.2s ease;
+      transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
     .profile-links a:hover {
@@ -224,6 +239,7 @@
       padding: 34px 40px;
       margin-bottom: 22px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(220, 228, 233, 0.55);
     }
 
     .content-card h2 {
@@ -266,7 +282,7 @@
 
     .research-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
       margin-top: 24px;
     }
@@ -276,6 +292,12 @@
       border-radius: 10px;
       padding: 20px;
       background: #fbfcfd;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .research-box:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(0, 0, 0, 0.04);
     }
 
     .research-box h3 {
@@ -368,7 +390,7 @@
 
     .info-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
     }
 
@@ -477,10 +499,53 @@
       border-radius: 7px;
       padding: 10px 16px;
       font-size: 13px;
-      transition: 0.2s ease;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
     .scholar-button:hover {
+      background: #004976;
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       BACK TO TOP
+       ========================= */
+
+    .back-to-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 44px;
+      height: 44px;
+      border: none;
+      border-radius: 50%;
+      background: #005f91;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 5px 16px rgba(0, 62, 95, 0.22);
+
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+
+      transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease,
+        background 0.2s ease;
+
+      z-index: 200;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
       background: #004976;
     }
 
@@ -498,25 +563,24 @@
 
 
     /* =========================
-       MOBILE
+       TABLET
        ========================= */
 
-    @media (max-width: 800px) {
+    @media (max-width: 1050px) {
 
       .nav {
         display: block;
-        padding: 12px 16px 9px;
+        padding-bottom: 10px;
       }
 
       .nav-name {
         margin-bottom: 7px;
-        font-size: 19px;
       }
 
       .nav-links {
         overflow-x: auto;
-        gap: 18px;
-        padding-bottom: 3px;
+        gap: 20px;
+        padding-bottom: 4px;
         scrollbar-width: none;
       }
 
@@ -526,21 +590,57 @@
 
       .nav-links a {
         margin-left: 0;
+      }
+
+      section {
+        scroll-margin-top: 120px;
+      }
+
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 800px) {
+
+      .nav {
+        padding: 11px 16px 8px;
+      }
+
+      .nav-name {
+        font-size: 19px;
+      }
+
+      .nav-links {
+        gap: 17px;
+      }
+
+      .nav-links a {
         font-size: 13px;
       }
 
       .container {
         grid-template-columns: 1fr;
-        margin-top: 20px;
+        margin-top: 18px;
         padding: 0 16px;
+        gap: 20px;
       }
 
       .profile-card {
         position: static;
+        padding: 28px 22px;
+      }
+
+      .avatar {
+        width: 135px;
+        height: 135px;
       }
 
       .content-card {
         padding: 26px 24px;
+        border-radius: 12px;
       }
 
       .research-grid,
@@ -548,8 +648,44 @@
         grid-template-columns: 1fr;
       }
 
+      .timeline-item {
+        padding-left: 28px;
+      }
+
       section {
-        scroll-margin-top: 110px;
+        scroll-margin-top: 108px;
+      }
+
+      .back-to-top {
+        right: 16px;
+        bottom: 16px;
+        width: 42px;
+        height: 42px;
+      }
+
+    }
+
+
+    /* =========================
+       SMALL MOBILE
+       ========================= */
+
+    @media (max-width: 480px) {
+
+      .content-card {
+        padding: 23px 19px;
+      }
+
+      .content-card h2 {
+        font-size: 20px;
+      }
+
+      .research-box {
+        padding: 17px;
+      }
+
+      .profile-card h1 {
+        font-size: 27px;
       }
 
     }
@@ -570,7 +706,7 @@
       Tang Ji
     </div>
 
-    <div class="nav-links">
+    <nav class="nav-links" aria-label="Main navigation">
 
       <a href="#about">About</a>
       <a href="#research">Research</a>
@@ -580,11 +716,12 @@
       <a href="#awards">Awards</a>
       <a href="#publications">Publications</a>
 
-    </div>
+    </nav>
 
   </div>
 
 </header>
+
 
 
 <div class="container">
@@ -597,7 +734,7 @@
   <aside class="profile-card">
 
     <div class="avatar">
-      <img src="profile.png" alt="Tang Ji">
+      <img src="profile.png" alt="Portrait of Tang Ji">
     </div>
 
     <h1>Tang Ji</h1>
@@ -706,6 +843,7 @@
     <section class="content-card" id="research">
 
       <h2>Research</h2>
+
 
       <div class="interest-tags">
 
@@ -1360,9 +1498,106 @@
 </div>
 
 
+
 <footer>
   © 2026 Tang Ji
 </footer>
+
+
+
+<button
+  class="back-to-top"
+  id="backToTop"
+  aria-label="Back to top"
+  title="Back to top">
+  ↑
+</button>
+
+
+
+<script>
+
+  /* =========================
+     BACK TO TOP
+     ========================= */
+
+  const backToTopButton =
+    document.getElementById("backToTop");
+
+  window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 500) {
+      backToTopButton.classList.add("show");
+    } else {
+      backToTopButton.classList.remove("show");
+    }
+
+  });
+
+  backToTopButton.addEventListener("click", function () {
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  });
+
+
+
+  /* =========================
+     ACTIVE NAVIGATION
+     ========================= */
+
+  const sections =
+    document.querySelectorAll("main section[id]");
+
+  const navLinks =
+    document.querySelectorAll(".nav-links a");
+
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "-25% 0px -60% 0px",
+    threshold: 0
+  };
+
+
+  const observer =
+    new IntersectionObserver(function (entries) {
+
+      entries.forEach(function (entry) {
+
+        if (entry.isIntersecting) {
+
+          const currentId =
+            entry.target.getAttribute("id");
+
+          navLinks.forEach(function (link) {
+
+            link.classList.remove("active");
+
+            if (
+              link.getAttribute("href") ===
+              "#" + currentId
+            ) {
+              link.classList.add("active");
+            }
+
+          });
+
+        }
+
+      });
+
+    }, observerOptions);
+
+
+  sections.forEach(function (section) {
+    observer.observe(section);
+  });
+
+</script>
 
 
 </body>
