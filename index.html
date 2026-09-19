@@ -8,6 +8,15 @@
   <meta name="description"
         content="Academic homepage of Tang Ji. Research interests include Cognitive Digital Twin, Smart Manufacturing, Digital Twin and Industry 4.0.">
 
+  <meta property="og:title" content="Tang Ji | Academic Profile">
+  <meta property="og:description"
+        content="Research in Cognitive Digital Twin, Smart Manufacturing, Digital Twin and Industry 4.0.">
+  <meta property="og:type" content="website">
+  <meta property="og:image"
+        content="https://jitang1987.github.io/profile.png">
+
+  <link rel="icon" href="profile.png">
+
   <title>Tang Ji | Academic Profile</title>
 
   <style>
@@ -55,23 +64,28 @@
       font-size: 22px;
       font-weight: 700;
       color: #004976;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
+      white-space: nowrap;
     }
 
     .nav-links a {
       color: #444;
       text-decoration: none;
-      margin-left: 28px;
+      margin-left: 26px;
+      padding-bottom: 3px;
       font-size: 15px;
-      transition: color 0.2s ease;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s ease;
     }
 
     .nav-links a:hover {
       color: #0072c6;
+      border-bottom-color: #0072c6;
     }
 
 
@@ -136,10 +150,10 @@
     .status {
       display: inline-block;
       margin-top: 20px;
+      padding: 5px 12px;
       background: rgba(255, 255, 255, 0.14);
       border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: 20px;
-      padding: 5px 12px;
       font-size: 13px;
     }
 
@@ -212,9 +226,9 @@
       color: #005f91;
       margin-top: 0;
       margin-bottom: 20px;
+      padding-bottom: 10px;
       font-size: 22px;
       border-bottom: 2px solid #e8eef2;
-      padding-bottom: 10px;
     }
 
     .content-card h3 {
@@ -229,7 +243,7 @@
 
 
     /* =========================
-       RESEARCH INTERESTS
+       RESEARCH
        ========================= */
 
     .interest-tags {
@@ -245,11 +259,6 @@
       border-radius: 20px;
       font-size: 14px;
     }
-
-
-    /* =========================
-       RESEARCH FOCUS
-       ========================= */
 
     .research-grid {
       display: grid;
@@ -301,7 +310,7 @@
     .timeline-item {
       position: relative;
       padding-left: 32px;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
 
     .timeline-item:last-child {
@@ -335,6 +344,7 @@
       margin-top: 8px;
       color: #444;
       font-size: 14px;
+      max-width: 720px;
     }
 
     .year {
@@ -345,6 +355,36 @@
       padding: 2px 9px;
       font-size: 12px;
       margin-bottom: 6px;
+    }
+
+
+    /* =========================
+       AWARDS & MEMBERSHIPS
+       ========================= */
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .info-box {
+      border: 1px solid #e3eaee;
+      border-radius: 10px;
+      padding: 18px 20px;
+      background: #fbfcfd;
+    }
+
+    .info-box-title {
+      font-weight: 700;
+      color: #222;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .info-box-meta {
+      font-size: 13px;
+      color: #666;
     }
 
 
@@ -365,7 +405,7 @@
     }
 
     .publication {
-      padding: 16px 0;
+      padding: 17px 0;
       border-bottom: 1px solid #edf0f2;
     }
 
@@ -443,25 +483,53 @@
 
     @media (max-width: 800px) {
 
+      .nav {
+        display: block;
+        padding: 12px 16px 9px;
+      }
+
+      .nav-name {
+        margin-bottom: 7px;
+        font-size: 19px;
+      }
+
+      .nav-links {
+        overflow-x: auto;
+        gap: 18px;
+        padding-bottom: 3px;
+        scrollbar-width: none;
+      }
+
+      .nav-links::-webkit-scrollbar {
+        display: none;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+        font-size: 13px;
+      }
+
       .container {
         grid-template-columns: 1fr;
         margin-top: 20px;
+        padding: 0 16px;
       }
 
       .profile-card {
         position: static;
       }
 
-      .nav-links {
-        display: none;
-      }
-
       .content-card {
         padding: 26px 24px;
       }
 
-      .research-grid {
+      .research-grid,
+      .info-grid {
         grid-template-columns: 1fr;
+      }
+
+      section {
+        scroll-margin-top: 110px;
       }
 
     }
@@ -483,13 +551,12 @@
     </div>
 
     <div class="nav-links">
-
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
+      <a href="#awards">Awards</a>
       <a href="#publications">Publications</a>
-
     </div>
 
   </div>
@@ -500,222 +567,120 @@
 <div class="container">
 
 
-  <!-- =========================
-       PROFILE CARD
-       ========================= -->
+  <!-- PROFILE CARD -->
 
   <aside class="profile-card">
 
-
     <div class="avatar">
-
-      <img
-        src="profile.png"
-        alt="Tang Ji">
-
+      <img src="profile.png" alt="Tang Ji">
     </div>
 
-
-    <h1>
-      Tang Ji
-    </h1>
-
+    <h1>Tang Ji</h1>
 
     <div class="degree">
       PhD, Mechanical Engineering
     </div>
 
-
     <div class="status">
       Research Assistant
     </div>
 
-
     <div class="role">
-
       Department of Mechanical and Mechatronics Engineering
       <br>
-
       University of Auckland
       <br>
-
       Auckland, New Zealand
-
     </div>
-
 
     <div class="profile-links">
 
-
-      <!-- EMAIL -->
-
       <a href="mailto:tji379@aucklanduni.ac.nz">
-
-        <span class="link-icon">
-          @
-        </span>
-
-        <span>
-          Email
-        </span>
-
+        <span class="link-icon">@</span>
+        <span>Email</span>
       </a>
 
-
-      <!-- ORCID -->
-
-      <a
-        href="https://orcid.org/0000-0003-3433-3703"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        <span class="link-icon">
-          iD
-        </span>
-
-        <span>
-          ORCID
-        </span>
-
+      <a href="https://orcid.org/0000-0003-3433-3703"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span class="link-icon">iD</span>
+        <span>ORCID</span>
       </a>
 
-
-      <!-- GOOGLE SCHOLAR -->
-
-      <a
-        href="https://scholar.google.com/citations?user=5ovP_P4AAAAJ&hl=en"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        <span class="link-icon">
-          GS
-        </span>
-
-        <span>
-          Google Scholar
-        </span>
-
+      <a href="https://scholar.google.com/citations?user=5ovP_P4AAAAJ&hl=en"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span class="link-icon">GS</span>
+        <span>Google Scholar</span>
       </a>
 
-
-      <!-- LINKEDIN -->
-
-      <a
-        href="https://www.linkedin.com/in/tang--ji/"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        <span class="link-icon">
-          in
-        </span>
-
-        <span>
-          LinkedIn
-        </span>
-
+      <a href="https://www.linkedin.com/in/tang--ji/"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span class="link-icon">in</span>
+        <span>LinkedIn</span>
       </a>
-
 
     </div>
-
 
   </aside>
 
 
-
-  <!-- =========================
-       MAIN CONTENT
-       ========================= -->
+  <!-- MAIN CONTENT -->
 
   <main>
 
 
     <!-- ABOUT -->
 
-    <section
-      class="content-card"
-      id="about">
+    <section class="content-card" id="about">
 
-      <h2>
-        About
-      </h2>
-
+      <h2>About</h2>
 
       <p>
-
         Tang Ji received his PhD in Mechanical Engineering from the
         University of Auckland. His research focuses on Cognitive Digital
         Twin (CDT) for Smart Manufacturing, with particular interests in
         data interoperability, industrial communication and intelligent
         manufacturing systems.
-
       </p>
 
-
       <p>
-
         His work explores the integration of Digital Twin technologies,
         industrial communication protocols and AI-enabled methods to
         support Smart Manufacturing and Industry 4.0 applications.
-
       </p>
-
 
     </section>
 
 
-
     <!-- RESEARCH -->
 
-    <section
-      class="content-card"
-      id="research">
+    <section class="content-card" id="research">
 
-      <h2>
-        Research
-      </h2>
-
+      <h2>Research</h2>
 
       <div class="interest-tags">
 
-        <span class="tag">
-          Cognitive Digital Twin
-        </span>
-
-        <span class="tag">
-          Smart Manufacturing
-        </span>
-
-        <span class="tag">
-          Digital Twin
-        </span>
-
-        <span class="tag">
-          Industry 4.0
-        </span>
-
-        <span class="tag">
-          Industrial Interoperability
-        </span>
+        <span class="tag">Cognitive Digital Twin</span>
+        <span class="tag">Smart Manufacturing</span>
+        <span class="tag">Digital Twin</span>
+        <span class="tag">Industry 4.0</span>
+        <span class="tag">Industrial Interoperability</span>
 
       </div>
 
 
       <div class="research-grid">
 
-
         <div class="research-box">
 
-          <h3>
-            Cognitive Digital Twin
-          </h3>
+          <h3>Cognitive Digital Twin</h3>
 
           <p>
-
             Development of intelligent Digital Twin systems that integrate
             physical manufacturing assets, digital models, industrial data
             and AI-enabled capabilities.
-
           </p>
 
         </div>
@@ -723,16 +688,12 @@
 
         <div class="research-box">
 
-          <h3>
-            Smart Manufacturing
-          </h3>
+          <h3>Smart Manufacturing</h3>
 
           <p>
-
             Research on connected and intelligent manufacturing systems,
             including Cyber-Physical Production Systems and Industry 4.0
             technologies.
-
           </p>
 
         </div>
@@ -740,16 +701,12 @@
 
         <div class="research-box">
 
-          <h3>
-            Industrial Interoperability
-          </h3>
+          <h3>Industrial Interoperability</h3>
 
           <p>
-
             Integration of industrial communication protocols and
             information models to support reliable data exchange across
             manufacturing systems.
-
           </p>
 
         </div>
@@ -757,37 +714,26 @@
 
         <div class="research-box">
 
-          <h3>
-            Learning Factories
-          </h3>
+          <h3>Learning Factories</h3>
 
           <p>
-
             Research on Learning Factory architectures, implementation
             testbeds and their role in Smart Manufacturing education,
             research and industrial engagement.
-
           </p>
 
         </div>
 
-
       </div>
-
 
     </section>
 
 
-
     <!-- EDUCATION -->
 
-    <section
-      class="content-card"
-      id="education">
+    <section class="content-card" id="education">
 
-      <h2>
-        Education
-      </h2>
+      <h2>Education</h2>
 
 
       <div class="timeline">
@@ -808,10 +754,7 @@
           </div>
 
           <div class="timeline-description">
-
-            Research focused on Cognitive Digital Twin for Smart
-            Manufacturing.
-
+            Research focused on Cognitive Digital Twin for Smart Manufacturing.
           </div>
 
         </div>
@@ -836,6 +779,10 @@
 
         <div class="timeline-item">
 
+          <div class="year">
+            2006 – 2010
+          </div>
+
           <div class="timeline-title">
             BEng, Automotive Engineering
           </div>
@@ -849,23 +796,40 @@
 
       </div>
 
-
     </section>
-
 
 
     <!-- EXPERIENCE -->
 
-    <section
-      class="content-card"
-      id="experience">
+    <section class="content-card" id="experience">
 
-      <h2>
-        Academic Experience
-      </h2>
+      <h2>Experience</h2>
 
 
       <div class="timeline">
+
+
+        <div class="timeline-item">
+
+          <div class="year">
+            Current
+          </div>
+
+          <div class="timeline-title">
+            Technical Business Development Manager
+          </div>
+
+          <div class="timeline-meta">
+            Maian Fasteners · Auckland, New Zealand
+          </div>
+
+          <div class="timeline-description">
+            Technical business development, customer engagement and
+            market development for industrial fastening products in
+            New Zealand.
+          </div>
+
+        </div>
 
 
         <div class="timeline-item">
@@ -879,14 +843,35 @@
           </div>
 
           <div class="timeline-meta">
-            University of Auckland
+            University of Auckland · Auckland, New Zealand
           </div>
 
           <div class="timeline-description">
-
             Research and development activities in Smart Manufacturing,
-            Learning Factories and Digital Twin technologies.
+            Learning Factories, Digital Twin technologies and the
+            Laboratory for Industry 4.0 Smart Manufacturing Systems.
+          </div>
 
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="year">
+            Jun 2025 – Nov 2025
+          </div>
+
+          <div class="timeline-title">
+            Research Assistant
+          </div>
+
+          <div class="timeline-meta">
+            University of Auckland · Auckland, New Zealand
+          </div>
+
+          <div class="timeline-description">
+            Research support in manufacturing automation, process planning,
+            industrial communication and digital manufacturing technologies.
           </div>
 
         </div>
@@ -899,18 +884,64 @@
           </div>
 
           <div class="timeline-title">
-            Teaching Assistant / Professional Teaching Fellow
+            Teaching Assistant & Professional Teaching Fellow
           </div>
 
           <div class="timeline-meta">
-            University of Auckland
+            University of Auckland · Auckland, New Zealand
           </div>
 
           <div class="timeline-description">
+            Teaching, laboratory support and assessment activities in
+            Mechanical and Mechatronics Engineering, including manufacturing
+            and engineering courses.
+          </div>
 
-            Teaching and laboratory support in Mechanical and
-            Mechatronics Engineering.
+        </div>
 
+
+        <div class="timeline-item">
+
+          <div class="year">
+            2012 – 2019
+          </div>
+
+          <div class="timeline-title">
+            Pre-development Design Lead
+          </div>
+
+          <div class="timeline-meta">
+            Yirui Auto Tech · Onsite at SAIC Volkswagen · Shanghai, China
+          </div>
+
+          <div class="timeline-description">
+            Led pre-development activities for Volkswagen and Skoda
+            automotive interior programmes, including CATIA V5 design,
+            prototype development, ergonomic reviews and coordination
+            with manufacturing teams and suppliers.
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="year">
+            2010 – 2012
+          </div>
+
+          <div class="timeline-title">
+            Product Development Engineer
+          </div>
+
+          <div class="timeline-meta">
+            Yirui Auto Tech · Onsite at SAIC Volkswagen · Shanghai, China
+          </div>
+
+          <div class="timeline-description">
+            Product development and engineering design for automotive
+            interior components, including CAD modelling, engineering
+            drawings and cross-functional technical coordination.
           </div>
 
         </div>
@@ -918,25 +949,81 @@
 
       </div>
 
+    </section>
+
+
+    <!-- AWARDS -->
+
+    <section class="content-card" id="awards">
+
+      <h2>Awards & Memberships</h2>
+
+      <div class="info-grid">
+
+
+        <div class="info-box">
+
+          <div class="info-box-title">
+            Doctoral Scholarship
+          </div>
+
+          <div class="info-box-meta">
+            University of Auckland · 2021
+          </div>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <div class="info-box-title">
+            First in Course Award
+          </div>
+
+          <div class="info-box-meta">
+            MECHENG 753 – Manufacturing Information Systems · 2020
+          </div>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <div class="info-box-title">
+            IEEE Member
+          </div>
+
+          <div class="info-box-meta">
+            2022 – Present
+          </div>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <div class="info-box-title">
+            Mechanical Engineering Group (MEG)
+          </div>
+
+          <div class="info-box-meta">
+            Engineering New Zealand · 2022 – Present
+          </div>
+
+        </div>
+
+
+      </div>
 
     </section>
 
 
+    <!-- PUBLICATIONS -->
 
-    <!-- =========================
-         PUBLICATIONS
-         ========================= -->
+    <section class="content-card" id="publications">
 
-    <section
-      class="content-card"
-      id="publications">
+      <h2>Selected Publications</h2>
 
-      <h2>
-        Selected Publications
-      </h2>
-
-
-      <!-- 2026 -->
 
       <div class="publication-year">
         2026
@@ -959,19 +1046,15 @@
           pp. 477–494, Elsevier.
         </div>
 
-        <a
-          class="doi-link"
-          href="https://doi.org/10.1016/B978-0-443-43896-7.00001-7"
-          target="_blank"
-          rel="noopener noreferrer">
+        <a class="doi-link"
+           href="https://doi.org/10.1016/B978-0-443-43896-7.00001-7"
+           target="_blank"
+           rel="noopener noreferrer">
           DOI
         </a>
 
       </div>
 
-
-
-      <!-- 2025 -->
 
       <div class="publication-year">
         2025
@@ -995,11 +1078,10 @@
           93, 102927.
         </div>
 
-        <a
-          class="doi-link"
-          href="https://doi.org/10.1016/j.rcim.2024.102927"
-          target="_blank"
-          rel="noopener noreferrer">
+        <a class="doi-link"
+           href="https://doi.org/10.1016/j.rcim.2024.102927"
+           target="_blank"
+           rel="noopener noreferrer">
           DOI
         </a>
 
@@ -1022,11 +1104,10 @@
           44, 1242–1253.
         </div>
 
-        <a
-          class="doi-link"
-          href="https://doi.org/10.1016/j.mfglet.2025.06.144"
-          target="_blank"
-          rel="noopener noreferrer">
+        <a class="doi-link"
+           href="https://doi.org/10.1016/j.mfglet.2025.06.144"
+           target="_blank"
+           rel="noopener noreferrer">
           DOI
         </a>
 
@@ -1049,19 +1130,15 @@
           pp. 3367–3372.
         </div>
 
-        <a
-          class="doi-link"
-          href="https://doi.org/10.1109/CASE58245.2025.11163934"
-          target="_blank"
-          rel="noopener noreferrer">
+        <a class="doi-link"
+           href="https://doi.org/10.1109/CASE58245.2025.11163934"
+           target="_blank"
+           rel="noopener noreferrer">
           DOI
         </a>
 
       </div>
 
-
-
-      <!-- 2024 -->
 
       <div class="publication-year">
         2024
@@ -1085,11 +1162,10 @@
           pp. 1656–1661.
         </div>
 
-        <a
-          class="doi-link"
-          href="https://doi.org/10.1109/CASE59546.2024.10711555"
-          target="_blank"
-          rel="noopener noreferrer">
+        <a class="doi-link"
+           href="https://doi.org/10.1109/CASE59546.2024.10711555"
+           target="_blank"
+           rel="noopener noreferrer">
           DOI
         </a>
 
@@ -1111,19 +1187,15 @@
           41, 1163–1169.
         </div>
 
-        <a
-          class="doi-link"
-          href="https://doi.org/10.1016/j.mfglet.2024.09.142"
-          target="_blank"
-          rel="noopener noreferrer">
+        <a class="doi-link"
+           href="https://doi.org/10.1016/j.mfglet.2024.09.142"
+           target="_blank"
+           rel="noopener noreferrer">
           DOI
         </a>
 
       </div>
 
-
-
-      <!-- 2023 -->
 
       <div class="publication-year">
         2023
@@ -1146,24 +1218,20 @@
           pp. 1–6.
         </div>
 
-        <a
-          class="doi-link"
-          href="https://doi.org/10.1109/CASE56687.2023.10260436"
-          target="_blank"
-          rel="noopener noreferrer">
+        <a class="doi-link"
+           href="https://doi.org/10.1109/CASE56687.2023.10260436"
+           target="_blank"
+           rel="noopener noreferrer">
           DOI
         </a>
 
       </div>
 
 
-      <!-- GOOGLE SCHOLAR BUTTON -->
-
-      <a
-        class="scholar-button"
-        href="https://scholar.google.com/citations?user=5ovP_P4AAAAJ&hl=en"
-        target="_blank"
-        rel="noopener noreferrer">
+      <a class="scholar-button"
+         href="https://scholar.google.com/citations?user=5ovP_P4AAAAJ&hl=en"
+         target="_blank"
+         rel="noopener noreferrer">
 
         View all publications on Google Scholar
 
@@ -1174,7 +1242,6 @@
 
 
   </main>
-
 
 </div>
 
